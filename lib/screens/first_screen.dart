@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Firstscreen extends StatelessWidget {
-  const Firstscreen({super.key});
+class firstScreen extends StatelessWidget {
+  const firstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class Firstscreen extends StatelessWidget {
               width: 150,
               height: 150,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(200),
-                  ),
-                  color: Colors.green
+                borderRadius: BorderRadius.all(
+                  Radius.circular(200),
+                ),
+                color: Colors.green,
               ),
             ),
           ),
@@ -28,13 +28,13 @@ class Firstscreen extends StatelessWidget {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(200),
-                  ),
-                  color: Colors.white
+                borderRadius: BorderRadius.all(
+                  Radius.circular(200),
+                ),
+                color: Colors.white,
               ),
             ),
-          ),
+          )
         ],
       ),
     );

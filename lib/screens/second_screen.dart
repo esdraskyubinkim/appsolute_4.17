@@ -15,10 +15,17 @@ class SecondScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/panda.jpeg',
+                'assets/images/gyeongsogo.webp',
                 width: 300,
                 height: 300,
               ),
+              Text(
+                'hak gyo',
+                style: TextStyle(
+                    fontFamily: 'Regular',
+                    fontSize: 50
+                ),
+              )
             ],
           ),
         ),

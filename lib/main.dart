@@ -3,16 +3,15 @@ import 'package:cleng/screens/first_screen.dart';
 import 'package:cleng/screens/second_screen.dart';
 import 'package:cleng/screens/third_screen.dart';
 
-
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return MaterialApp(
       title: 'My APP',
       home: MyHomePage(),
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget{
   const MyHomePage({super.key});
 
   @override
@@ -36,23 +35,22 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     _tabController = TabController(length: 3, vsync: this);
   }
 
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text('My APP'),
+        title: Text('gumi'),
         bottom: TabBar(
           controller: _tabController,
           tabs: [
             Tab(
-              text: 'Tab1',
+              text: 'tab1',
             ),
             Tab(
-              text: 'Tab2',
+              text: 'tab2',
             ),
             Tab(
-              text: 'Tab3',
+              text: 'tab3',
             )
           ],
         ),
@@ -61,26 +59,42 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         controller: _tabController,
         children: [
           Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Firstscreen()),
-                  );
-                },
-                child: Text(
-                    'Use Stack'
-                ),
-              )
-          ),
-          Center(
-            child: Text(
-                'Tab2'
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => firstScreen()),
+                );
+              },
+              child: Text(
+                  'Use Stack'
+              ),
             ),
           ),
           Center(
-            child: Text(
-                'Tab3'
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondScreen()),
+                );
+              },
+              child: Text(
+                  'Use Image'
+              ),
+            ),
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FirstScreen()),
+                );
+              },
+              child: Text(
+                  'Use Stack3'
+              ),
             ),
           )
         ],
@@ -88,6 +102,3 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     );
   }
 }
-
-
-
